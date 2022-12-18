@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Condition</title>
+
+    <style>
+        html {
+            font-size: 20px;
+        }
+
+        * {
+            line-height: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Result</h1>
+
+    <script>
+
+        let text = '';
+        const Marks = [99, 92, 85, 81, 80, 72, 63, 66, 54, 59, 41, 47, 40, 35, 20];
+        // document.getElementById("demo").innerHTML = text;
+
+        Marks.forEach(myResult = (item, index) => {
+
+            if (item > 90) {//if percent > 85 --A
+                console.log(item, '- Distinction');
+                document.write(index + " : " + item + "- Distinction" + "<br>");
+                // document.getElementById("demo1").innerHTML = index + ": " + item + "- Distinction" + "<br>";
+            }
+            else if (item > 80 && item <= 90) {//80<percent80=85  --A
+                console.log(item, '- First Class');
+                document.write(index + " : " + item + "- First Class" + "<br>");
+                // document.getElementById("demo2").innerHTML = index + ": " + item + "- First Class" + "<br>";
+            }
+            else if (item > 70 && item <= 80) {//70<percent<=80 --B
+                console.log(item, '- Second Class');
+                document.write(index + " : " + item + "- Second Class" + "<br>");
+            }
+            else if (item > 60 && item <= 70) {//60<percent<=70  --C
+                console.log(item, '- Third Class');
+                document.write(index + " : " + item + "- Third Class" + "<br>");
+            }
+            else if (item > 50 && item <= 60) {//40<percent<=60  --D
+                console.log(item, '- Grade - D');
+                document.write(index + " : " + item + "- Grade - D" + "<br>");
+            }
+            else if (item > 40 && item <= 50) {//percent<=40  --E
+                console.log(item, '- Grade - E');
+                document.write(index + ": " + item + "- Grade - E" + "<br>");
+            }
+            else {//failed condition
+                console.log(item, '- Failed');
+                document.write(index + ": " + item + "- Failed" + "<br>");
+            }
+            // else if (item <= 40) {//failed condition
+            //     console.log(item, '- Failed');
+            //     document.write(index + ": " + item + "- Failed" + "<br>");
+            // }
+
+        });
+
+        // function myResult(item, index) {
+
+        //     if (Marks > 0 && Marks <= 100) {
+        //         if (Marks > 50) {
+        //             if (Marks > 50 && Marks <= 60) {
+        //                 return text = index + ": " + item + "Pass Class" + "<br>";
+        //                 // console.log("Pass Class");
+        //             } else if (Marks > 60 && Marks <= 70) {
+        //                 text = index + ": " + item + "First Class" + "<br>";
+        //                 // console.log("First Class");
+        //             }
+        //             else if (Marks > 70 && Marks <= 80) {
+        //                 text = index + ": " + item + "Distiction Class" + "<br>";
+        //                 // console.log("Distiction Class");
+        //             }
+        //             else if (Marks > 80 && Marks <= 90) {
+        //                 text = index + ": " + item + "Distiction++ Class" + "<br>";
+        //                 // console.log("Distiction++ Class");
+        //             }
+        //             else {
+        //                 console.log("Topper");
+        //             }
+        //         }
+
+        //         else {
+        //             console.log("Try Again");
+        //         }
+        //     } else {
+        //         console.log("Invalid Makrs");
+        //     }
+
+        //     if (Marks > 85) {//if percent > 85 --A
+        //         document.write('Grade - A');
+        //     }
+        //     else if (Marks <= 85 && a > 80) {//80<percent80=85  --A
+        //         document.write('Grade - A-');
+        //     }
+        //     else if (Marks > 70 && a <= 80) {//70<percent<=80 --B
+        //         document.write('Grade - B');
+        //     }
+        //     else if (Marks > 60 && a <= 70) {//60<percent<=70  --C
+        //         document.write('Grade - C');
+        //     }
+        //     else if (Marks > 40 && a <= 60) {//40<percent<=60  --D
+        //         document.write('Grade - D');
+        //     }
+        //     else if (Marks <= 40) {//percent<=40  --E
+        //         if (Marks <= 35) {//failed condition
+        //             document.write('Grade - E Candidate failed');
+        //         }
+        //         else { document.write('Grade - E'); }
+        //     }
+        // };
+
+
+
+
+    </script>
+
+</body>
+
+</html>
