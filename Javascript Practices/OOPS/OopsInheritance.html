@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance In OOPS</title>
+</head>
+
+<body>
+
+    <script>
+
+        // --------------------Basic Understanding Example Start--------------------
+
+        // class Fruits { //Parent Class
+        //     //Props & Methods
+        // }
+
+        // class Vegetables extends Fruits { //Child Class
+        //     //Props & Methods
+        // }
+
+        // let A = new Fruits();//Access only parent class's Props & Methods
+
+        // let B = new Vegetables();//Access Parent And Child both class's Props & Methods
+
+        // --------------------Basic Understanding Example End--------------------
+
+        // --------------------Itermediate Understanding Example Start--------------------
+
+        // class Employee { //Parent Class
+        //     constructor() {
+        //         console.log("Constructor - Employee");
+        //     }
+        // }
+
+        // class Manager extends Employee { //Child Class
+        //     constructor(name) {
+        //         super();
+        //         console.log("Constructor - Manager : " + name);
+        //     }
+        // }
+
+        // let B = new Manager("Renish Bhuva");//Access Parent And Child both class's Props & Methods
+
+        // --------------------Itermediate Understanding Example End--------------------
+
+        // --------------------Prototype Example Start--------------------
+
+        class Employee { //Parent Class
+            constructor(name, age, salary) {
+                this.empname = name;
+                this.empage = age;
+                this.empsalary = salary;
+                // console.log("Constructor - Employee");
+            }
+
+            info() {
+                document.write(
+                    `<h3>Employee Class</h3>
+                    Name : ${this.empname}<br>
+                    Age : ${this.empage}<br>
+                    Salary : ${this.empsalary}<br>`
+                )
+            }
+        }
+
+        class Manager extends Employee { //Child Class
+            // info() {
+            //     super.info();
+            //     console.log("Manager Name : " + this.empname);
+            // }
+            info() {
+                let travelingExpense = 10000;
+                let phoneExpense = 10000;
+                let totalSalary = this.empsalary + travelingExpense + phoneExpense;
+
+                document.write(
+                    `<h3>Employee Class</h3>
+                        Name : ${this.empname}<br>
+                        Age : ${this.empage}<br>
+                        Salary : ${totalSalary}<br>`
+                )
+            }
+        }
+
+        let A = new Manager("Renish Bhuva", 25, 200000);//Access Parent And Child both class's Props & Methods
+        A.info();
+        // --------------------Prototype Example End--------------------
+
+    </script>
+
+</body>
+
+</html>

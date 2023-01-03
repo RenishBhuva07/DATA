@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes & Objects In OOPS</title>
+</head>
+
+<body>
+
+    <script>
+
+        // class hello {
+        //     message() {
+        //         console.log("Hello Renish");
+        //     }
+        //     sorry() {
+        //         console.log("Sorry Renish");
+        //     }
+        // };
+
+        // let a = new hello(); //Object
+        // a.message();
+        // a.sorry();
+
+
+        // class student {
+
+        //     constructor() {
+        //         let name;
+        //         console.log("Constructor");
+        //     }
+
+        //     hello() {
+        //         console.log("Hello " + this.name);
+        //     }
+
+        // }
+        // let a = new student();
+        // a.name = "Renish Bhuva";
+        // a.hello();
+
+
+        // Classes Contains Reusable Functionalities
+        class student { //Class
+
+            constructor(name, age) { //Constructor Function
+                this.studentname = name;
+                this.studentage = age;
+                // console.log("Constructor");
+            }
+
+            hello() { //Prototype Function
+                // console.log("Hello " + this.studentname + ", Your Age is " + this.studentage + ".");
+                console.log(`Hello ${this.studentname}, Your age is ${this.studentage}.`);
+            }
+
+            static staticMethod() {
+                console.log("Static Function");
+            }
+
+        }
+        // And The Functionalities of Class will use in multiple Objects
+        let a = new student("Renish Bhuva", 21); // Object1
+        let b = new student("Parth Bhuva", 18); // Object2
+        a.hello();
+        b.hello();
+        student.staticMethod();
+
+    </script>
+
+</body>
+
+</html>

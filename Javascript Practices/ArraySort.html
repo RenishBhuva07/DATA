@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting</title>
+
+    <style>
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .col-50 {
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="ex_1 col-50">
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+        </div>
+        <div class="ex_2 col-50">
+            <p id="demo3"></p>
+            <p id="demo4"></p>
+            <p id="demo5"></p>
+        </div>
+    </div>
+
+    <script>
+        // --------------------EX-1--------------------
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = "Array-1 : " + fruits;
+
+        fruits.sort();
+        document.getElementById("demo2").innerHTML = "Sort Alphabetically : " + fruits;
+        // --------------------EX-1--------------------
+        // --------------------EX-2--------------------
+        const nums = [1000, 10000, 1, 10, 100, 2, 2000, 20];
+        document.getElementById("demo3").innerHTML = "Array-2 : " + nums;
+
+        document.getElementById("demo4").innerHTML = "Sort Alphabetically : " + nums.sort((a, b) => {
+            // console.log(a, b);
+        });
+        document.getElementById("demo5").innerHTML = "Sort Numerically : " + nums.sort((a, b) => {
+            console.log(a, b);
+            return a - b;
+        });
+
+        // --------------------EX-2--------------------
+    </script>
+
+</body>
+
+</html>
