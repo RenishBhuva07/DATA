@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Object</title>
+</head>
+
+<body>
+    <script>
+
+        // key's Value exist "y" then print true otherwise print false
+        const A = [{ active: "y" }, { active: "n" }, { active: "y" }];
+        const B = A.map((x) => x.active == "y" ? x.active = true : x.active = false)
+        console.log(A);
+
+    </script>
+</body>
+
+</html>
